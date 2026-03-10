@@ -1,0 +1,148 @@
+/* Location Cards Styling */
+.location-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-img {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.location-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-card:hover .location-img img {
+    transform: scale(1.1);
+}
+
+.location-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #dfa974;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.location-body {
+    padding: 25px;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-body h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #19191a;
+    text-align: center !important;
+    width: 100%;
+    display: block;
+}
+
+.location-body p {
+    margin-bottom: 20px;
+    color: #6b6b6b;
+    flex-grow: 1;
+}
+
+.location-features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.location-features span {
+    margin-right: 15px;
+    margin-bottom: 8px;
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+.location-features span i {
+    color: #dfa974;
+    margin-right: 5px;
+}
+
+/* Center all section titles */
+.section-title {
+    text-align: center !important;
+}
+
+.section-title span, 
+.section-title h2 {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+}
+
+/* Make sure the cards are same height in a row */
+.hp-room-section .row > [class*="col-"] {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 991px) {
+    .location-img {
+        height: 220px;
+    }
+    
+    .location-body h3 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hp-room-section .row > [class*="col-"] {
+        margin-bottom: 30px;
+    }
+    
+    .location-card {
+        margin-bottom: 0;
+    }
+    
+    .location-features {
+        justify-content: center;
+    }
+    
+    .location-features span {
+        margin: 0 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .location-img {
+        height: 200px;
+    }
+    
+    .location-body {
+        padding: 20px 15px;
+    }
+    
+    .location-body h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .location-body p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+} 
